@@ -14,6 +14,6 @@
       <label for="inputBike"># Bikes</label>
     </div>
 
-    <button class="btn btn-lg btn-primary btn-block" type="submit">Rent</button>
+    <button class="btn btn-lg btn-primary btn-block" type="submit" value="Rent">Rent</button>
   </form>
 @endsection
