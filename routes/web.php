@@ -12,3 +12,5 @@
 */
 
 Route::get('/', 'HomeController@getIndex');
+Route::post('/', 'HomeController@rentBikes');
+Route::get('test', 'HomeController@rentBikesBydates');

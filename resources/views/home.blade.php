@@ -1,29 +1,19 @@
 @extends('layouts.app')
 @section('main-title') Intive FDV test @endsection
 @section('main-content')
-  <form class="form-signin">
+  <form class="form-signin" action="/" method="post">
+    {{ csrf_field() }}
     <div class="text-center mb-4">
-      <img class="mb-4" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
-      <h1 class="h3 mb-3 font-weight-normal">Floating labels</h1>
-      <p>Build form controls with floating labels via the <code>:placeholder-shown</code> pseudo-element. <a href="https://caniuse.com/#feat=css-placeholder-shown">Works in latest Chrome, Safari, and Firefox.</a></p>
+      <img class="mb-4" src="{{ asset('/img/rentabike.png') }}" alt="ACME RENTAL'S BIKES" width="100%" height="40%">
+      <h1 class="h3 mb-3 font-weight-normal">ACME RENTAL'S BIKES</h1>
+      <p>Please input the Quantity of bikes you may want to rent</p>
     </div>
 
     <div class="form-label-group">
-      <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-      <label for="inputEmail">Email address</label>
+      <input type="number" id="inputBike" name="inputBike" min="1" class="form-control" placeholder="Bike Qty" required autofocus>
+      <label for="inputBike"># Bikes</label>
     </div>
 
-    <div class="form-label-group">
-      <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-      <label for="inputPassword">Password</label>
-    </div>
-
-    <div class="checkbox mb-3">
-      <label>
-        <input type="checkbox" value="remember-me"> Remember me
-      </label>
-    </div>
-    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-    <p class="mt-5 mb-3 text-muted text-center">&copy; 2017-2018</p>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Rent</button>
   </form>
 @endsection
